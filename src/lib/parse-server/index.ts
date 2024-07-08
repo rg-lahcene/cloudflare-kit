@@ -1,4 +1,4 @@
-import { env } from '$env/static/private';
+import { PARSE_APPLICATION_ID, PARSE_SERVER_URL } from '$env/static/private';
 import type { Appointment, AppointmentType, User } from '$lib/types';
 import type { PaymentIntentResult } from '@stripe/stripe-js';
 
@@ -176,7 +176,7 @@ class ParseError extends Error {
 }
 
 export const parseCall: ParsePromiseFunc = async (fetch, endpoint, request) => {
-	const url = `${env.PARSE_SERVER_URL}/functions/${endpoint}`;
+	const url = `${PARSE_SERVER_URL}/functions/${endpoint}`;
 	console.log({ url, request });
 	try {
 		const response = await fetch(url, {
@@ -184,7 +184,7 @@ export const parseCall: ParsePromiseFunc = async (fetch, endpoint, request) => {
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
-				'X-Parse-Application-Id': env.PARSE_APPLICATION_ID
+				'X-Parse-Application-Id': PARSE_APPLICATION_ID
 			},
 			body: JSON.stringify(request)
 		});
@@ -206,7 +206,7 @@ export const parseCall: ParsePromiseFunc = async (fetch, endpoint, request) => {
 		const data = await response
 			.clone()
 			.json()
-			.then((res) => res.result);
+			.then((res: any) => res.result);
 		return { data };
 	} catch (error: any) {
 		console.log('⛔ Fetch error: ', error);
