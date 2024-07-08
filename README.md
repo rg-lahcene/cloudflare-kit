@@ -1,6 +1,6 @@
 # create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
 
@@ -36,3 +36,48 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+# draft:
+
+pages:
+
+## select business location, visible only if there are multiple locations
+
+`/v2/appointments/:hash (getAppointmentDataFromUser)`
+
+```ts
+return {
+portalStyles: {...}
+businesses: Business[]
+stripeConfig?: {publicKey: string}
+}
+```
+
+```ts
+interface Business {
+    name: string
+    logo: string
+    address: { ...}
+    website: string
+    phone: string
+
+    confirmationItems: string[]
+    appointmentTypes: AppointmentType[]
+
+
+}
+interface AppointmentType {
+    name: string
+    duration: number,
+    gap: number,
+    leadTime: number
+    maxAttendees: number
+    leadTime: number
+    cancelationPolicy: number
+    color: string
+    price
+    practitioners: Practitioner[]
+}
+```
+
+if response.businesses.length ===1 return redirect ...

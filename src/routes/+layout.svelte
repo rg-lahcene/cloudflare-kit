@@ -1,53 +1,26 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+	// import { setInitialClassState } from '$lib/components/ui/dark-mode-toggle';
+	/* fonts */
+	import '@fontsource/poppins';
+	import '@fontsource/poppins/400.css';
+	import '@fontsource/poppins/500.css';
+	import '@fontsource/poppins/600.css';
+	import '@fontsource/poppins/700.css';
+	import '@fontsource/poppins/800.css';
+	import '../app.postcss';
 </script>
 
-<div class="app">
-	<Header />
+<svelte:head>
+	<!-- This causes the new eslint-plugin-svelte: https://github.com/sveltejs/eslint-plugin-svelte/issues/492 -->
+	<!-- {@html `<script nonce="%sveltekit.nonce%">(${setInitialClassState.toString()})();</script>`} -->
+</svelte:head>
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
+<main class="relative max-w-7xl mx-auto">
+	<slot />
+</main>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	:global(body) {
+		font-family: 'Poppins', sans-serif;
 	}
 </style>

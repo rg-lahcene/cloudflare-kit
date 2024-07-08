@@ -1,0 +1,191 @@
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+		font-feature-settings:
+			'rlig' 1,
+			'calt' 1;
+	}
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 47.4% 11.2%;
+
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 47.4% 11.2%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 47.4% 11.2%;
+
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+
+		--primary: #d97626; /* use hex so to be compatible with dynamic colors set by the user*/
+		--primary-foreground: 210 40% 98%;
+
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+
+		--destructive: 0 92% 38%;
+		--destructive-foreground: 210 40% 98%;
+
+		--ring: 215 20.2% 65.1%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 224 71% 4%;
+		--foreground: 213 31% 91%;
+
+		--muted: 223 47% 11%;
+		--muted-foreground: 215.4 16.3% 56.9%;
+
+		--popover: 224 71% 4%;
+		--popover-foreground: 215 20.2% 65.1%;
+
+		--card: 224 71% 4%;
+		--card-foreground: 213 31% 91%;
+
+		--border: 216 34% 17%;
+		--input: 216 34% 17%;
+
+		--primary: 24.6 95% 53.1%;
+		--primary-50: 33.3 100% 96.5%;
+		--primary-100: 34.3 100% 91.8%;
+		--primary-200: 32.1 97.7% 83.1%;
+		--primary-300: 30.7 97.2% 72.4%;
+		--primary-400: 27 96% 61%;
+		--primary-500: 24.6 95% 53.1%;
+		--primary-600: 20.5 90.2% 48.2%;
+		--primary-700: 17.5 88.3% 40.4%;
+		--primary-800: 15 79.1% 33.7%;
+		--primary-900: 15.3 74.6% 27.8%;
+		--primary-950: 13 81.1% 14.5%;
+		--primary-foreground: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 1.2%;
+
+		--secondary: 222.2 47.4% 11.2%;
+		--secondary-foreground: 210 40% 98%;
+
+		--accent: 216 34% 17%;
+		--accent-foreground: 210 40% 98%;
+
+		--destructive: 359 51% 48%;
+		--destructive-foreground: 210 40% 98%;
+
+		--ring: 216 34% 17%;
+
+		--radius: 0.5rem;
+	}
+}
+
+@layer components {
+	.link {
+		@apply underline decoration-white/50 underline-offset-4 opacity-75 active:translate-y-px hover:decoration-primary hover:opacity-100;
+	}
+	.h1 {
+		@apply font-extrabold md:text-3xl text-lg sm:text-2xl  text-primary;
+	}
+}
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: theme('colors.neutral.200') transparent;
+}
+
+/* Other browsers */
+*::-webkit-scrollbar {
+	width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: theme('colors.neutral.200');
+	background-clip: padding-box;
+	border-radius: 0.5rem;
+	border: 0.25rem solid transparent;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: theme('colors.neutral.50');
+	background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+/* Firefox */
+body {
+	scrollbar-width: thin;
+	scrollbar-color: theme('colors.stone.100') transparent;
+}
+
+/* Other browsers */
+body::-webkit-scrollbar {
+	width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: theme('colors.stone.900');
+}
+
+body::-webkit-scrollbar-thumb {
+	background: theme('colors.neutral.600');
+	background-clip: padding-box;
+	border-radius: 0.5rem;
+	border: 0.25rem solid transparent;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: theme('colors.neutral.600');
+	background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+.list-card {
+	position: relative;
+	&::before {
+		position: absolute;
+		transition: all;
+		transition-duration: 350ms;
+		height: 65px;
+		width: 1px;
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0) 0%,
+			hsla(var(--primary)) 50%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		top: -1rem;
+		left: 0;
+		content: '';
+		opacity: 0;
+	}
+	&:hover {
+		&::before {
+			opacity: 1;
+			top: 3rem;
+		}
+	}
+}

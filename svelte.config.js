@@ -30,5 +30,8 @@ const config = {
 		}
 	},
 
+	shadcn: {
+		componentPath: './src/lib/components/ui'
+	}
 };
 export default config;

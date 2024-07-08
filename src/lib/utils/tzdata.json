@@ -1,0 +1,138 @@
+[
+	{
+		"name": "Europe",
+		"zones": {
+			"UK, Ireland, Portugal": "Europe/London",
+			"Central European Time": "Europe/Berlin",
+			"Helsinki, Eastern European": "Europe/Helsinki",
+			"Kyiv, Eastern European": "Europe/Kiev",
+			"Minsk": "Europe/Minsk",
+			"Moscow": "Europe/Moscow"
+		}
+	},
+	{
+		"name": "UTC",
+		"zones": {
+			"UTC Time": "UTC"
+		}
+	},
+	{
+		"name": "US & Canada",
+		"zones": {
+			"Pacific Time": "America/Los_Angeles",
+			"Mountain Time": "America/Denver",
+			"Central Time": "America/Chicago",
+			"Eastern Time": "America/New_York",
+			"Newfoundland": "America/St_Johns",
+			"Alaska": "America/Anchorage",
+			"Yukon": "America/Whitehorse",
+			"Arizona": "America/Phoenix",
+			"Hawaii": "Pacific/Honolulu"
+		}
+	},
+	{
+		"name": "Americas",
+		"zones": {
+			"America/Adak": "America/Adak",
+			"Asuncion": "America/Asuncion",
+			"Bogota, Jamaica, Lima": "America/Bogota",
+			"Buenos Aires": "America/Argentina/Buenos_Aires",
+			"America/Campo Grande": "America/Campo_Grande",
+			"Caracas": "America/Caracas",
+			"America/Godthab": "America/Godthab",
+			"Atlantic": "America/Goose_Bay",
+			"Guatemala, Costa Rica": "America/Guatemala",
+			"Saskatchewan": "America/Regina",
+			"America/Havana": "America/Havana",
+			"America/Mazatlan": "America/Mazatlan",
+			"Guadalajara/Mexico City": "America/Mexico_City",
+			"Montevideo": "America/Montevideo",
+			"America/Miquelon": "America/Miquelon",
+			"America/Noronha": "America/Noronha",
+			"Santiago": "America/Santiago",
+			"America/Santa Isabel": "America/Santa_Isabel",
+			"Atlantic Standard": "America/Santo_Domingo",
+			"Brasilia": "America/Sao_Paulo"
+		}
+	},
+	{
+		"name": "Africa",
+		"zones": {
+			"Morocco": "Africa/Casablanca",
+			"West Africa": "Africa/Lagos",
+			"Central Africa": "Africa/Johannesburg",
+			"East Africa": "Africa/Nairobi",
+			"Libya, Egypt": "Africa/Cairo",
+			"Africa/Windhoek": "Africa/Windhoek"
+		}
+	},
+	{
+		"name": "Middle East & Asia",
+		"zones": {
+			"Jordan": "Asia/Amman",
+			"Baghdad, Saudi Arabia": "Asia/Baghdad",
+			"Asia/Baku": "Asia/Baku",
+			"Beirut, Lebanon": "Asia/Beirut",
+			"Syria": "Asia/Damascus",
+			"Asia/Dhaka": "Asia/Dhaka",
+			"Dubai": "Asia/Dubai",
+			"Asia/Gaza": "Asia/Gaza",
+			"Asia/Irkutsk": "Asia/Irkutsk",
+			"Indonesia Western": "Asia/Jakarta",
+			"Israel": "Asia/Jerusalem",
+			"Kabul": "Asia/Kabul",
+			"Pakistan, Maldives": "Asia/Karachi",
+			"Kathmandu": "Asia/Kathmandu",
+			"India, Sri Lanka": "Asia/Kolkata",
+			"Krasnoyarsk": "Asia/Krasnoyarsk",
+			"Asia/Omsk": "Asia/Omsk",
+			"Asia/Rangoon": "Asia/Rangoon",
+			"China, Singapore": "Asia/Shanghai",
+			"Tehran": "Asia/Tehran",
+			"Japan, South Korea": "Asia/Tokyo",
+			"Asia/Vladivostok": "Asia/Vladivostok",
+			"Asia/Yakutsk": "Asia/Yakutsk",
+			"Yekaterinburg": "Asia/Yekaterinburg",
+			"Asia/Yerevan": "Asia/Yerevan"
+		}
+	},
+	{
+		"name": "Atlantic",
+		"zones": {
+			"Azores": "Atlantic/Azores",
+			"Cape Verde": "Atlantic/Cape_Verde"
+		}
+	},
+	{
+		"name": "Australia",
+		"zones": {
+			"Adelaide": "Australia/Adelaide",
+			"Brisbane": "Australia/Brisbane",
+			"Australia/Darwin": "Australia/Darwin",
+			"Australia/Eucla": "Australia/Eucla",
+			"Australia/Lord Howe": "Australia/Lord_Howe",
+			"Perth": "Australia/Perth",
+			"Sydney, Melbourne": "Australia/Sydney"
+		}
+	},
+	{
+		"name": "Pacific",
+		"zones": {
+			"Pacific/Apia": "Pacific/Apia",
+			"Auckland": "Pacific/Auckland",
+			"Pacific/Chatham": "Pacific/Chatham",
+			"Pacific/Easter": "Pacific/Easter",
+			"Pacific/Fiji": "Pacific/Fiji",
+			"Pacific/Gambier": "Pacific/Gambier",
+			"Pacific/Kiritimati": "Pacific/Kiritimati",
+			"Pacific/Majuro": "Pacific/Majuro",
+			"Pacific/Marquesas": "Pacific/Marquesas",
+			"Pacific/Norfolk": "Pacific/Norfolk",
+			"Pacific/Noumea": "Pacific/Noumea",
+			"Pacific/Pago Pago": "Pacific/Pago_Pago",
+			"Pacific/Pitcairn": "Pacific/Pitcairn",
+			"Pacific/Tarawa": "Pacific/Tarawa",
+			"Pacific/Tongatapu": "Pacific/Tongatapu"
+		}
+	}
+]
